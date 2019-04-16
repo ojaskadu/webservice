@@ -1,0 +1,90 @@
+
+
+1) Java Development Kit (jdk-8) mandatory  
+
+commands :
+    
+
+sudo apt update
+
+java -version
+
+sudo apt install openjdk-8-jdk
+
+java -version
+
+sudo update-alternatives --config java
+
+
+
+to set JAVA_HOME : 
+
+  go to /etc/environment  and add following 
+
+  JAVA_HOME="path to java bin directory"  
+ 
+  source /etc/environment
+
+then check using echo $JAVA_HOME
+
+
+2) Eclipse Java 
+
+https://websiteforstudents.com/how-to-install-eclipse-oxygen-ide-on-ubuntu-167-04-17-10-18-04/
+
+					or
+ubuntu software center 
+
+
+3) Netbeans 8 with glassfish server(JAVA EE Bundle) - https://netbeans.org/downloads/8.0.1/
+	
+Configuration for Netbeans - 
+
+To generate a web service client in the IDE from a web service or WSDL file you need to modify the IDE configuration file (netbeans.conf) to add the following switch to netbeans_default_options.
+
+-J-Djavax.xml.accessExternalSchema=all
+
+Configuring the GlassFish Server -
+
+If you are deploying to the GlassFish Server you need to modify the configuration file of the GlassFish Server (domain.xml) to enable the server to access external schemas to parse the wsdl file and generate the test client. To enable access to external schemas, open the GlassFish configuration file (GLASSFISH_INSTALL/glassfish/domains/domain1/config/domain.xml) and add the following JVM option element (in bold). You will need to restart the server for the change to take effect.
+
+</java-config>
+  ...
+  <jvm-options>-Djavax.xml.accessExternalSchema=all</jvm-options>
+</java-config>
+
+
+
+
+
+
+
+
+
+Open: Tools->Options->Java->Ant Paste the following in Properties:
+
+libs.CopyLibs.classpath=[Netbeans Install]NetBeans6.5java2antextraorg-netbeans-modules-java-j2seproject-copylibstask.jar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
